@@ -13,7 +13,9 @@ public class FunctionCalculator {
 
         for (double i = a; i <= n; i++) {
             for (double j = b; j <= m; j++) {
-                if (j != 0 && i != 2) {
+                if (j == 0 || i == 2) {
+                    throw new Exception("Error: Division by zero is impossible");
+                } else {
                     double value = i / j/ (i - 2);
                     result += value;
                 }
